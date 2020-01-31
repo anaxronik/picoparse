@@ -1,0 +1,27 @@
+{% extends 'posts/base.html' %}
+
+{% load static %}
+
+{% block main_content %}
+{% if post %}
+<div class="card mb-3">
+    <div class="card-header">
+        <a href="">
+            {{ post.title }}
+        </a>
+
+    </div>
+    <div class="card-body">
+        <p>
+            {{ post.text }}
+        </p>
+    </div>
+    <div class="card-footer text-muted">
+        <div>{{ post.author }}</div>
+        <div>{{ post.pub_date }}</div>
+    </div>
+</div>
+{% else %}
+<p>Пост не найден.</p>
+{% endif %}
+{% endblock %}

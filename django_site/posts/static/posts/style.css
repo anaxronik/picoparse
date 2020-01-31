@@ -1,0 +1,15 @@
+body {
+    background-color: #e8e8e8;
+}
+
+.navbar {
+    background-color: #8ac858;
+}
+
+.navbar-brand {
+    color: whitesmoke;
+}
+
+.card-footer {
+    background-color: #cacaca;
+}

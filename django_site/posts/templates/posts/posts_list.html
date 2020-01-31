@@ -1,0 +1,32 @@
+{% extends 'posts/base.html' %}
+
+{% load static %}
+
+{% block main_content %}
+
+{% if post_list %}
+{% for post in post_list %}
+
+<div class="card mb-3">
+
+
+    <div class="card-body">
+        <h3>
+            <a href="">
+                {{ post.title }}
+            </a>
+        </h3>
+        <p>
+            {{ post.text }}
+        </p>
+    </div>
+    <div class="card-footer text-muted">
+        <div>{{ post.author }}</div>
+        <div>{{ post.pub_date }}</div>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<p><h1>Постов не найденно</h1></p>
+{% endif %}
+{% endblock %}
